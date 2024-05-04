@@ -1,0 +1,103 @@
+body{
+    background: linear-gradient(to right,black,red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.stopwatch{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;   
+}
+.container{
+    background-color: silver;
+   
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    color: rgb(0, 2, 1);
+    text-shadow:1px 1px 5px rgb(255, 5, 5);
+    margin-bottom: 28px;
+}
+.timer{
+    font-size: 40px;
+    background-color: black;
+    color: red;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 1px 1px 10px red;
+    animation: zooming 1.5s infinite alternate;
+}
+@keyframes zooming {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.05);
+    }
+}
+.timer span{
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+.controls{
+    display: flex;
+    gap:25px;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 5px;
+    
+}
+button:hover{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px palevioletred;
+    
+}
+button{
+    padding: 8px;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px ;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+
+}
+#lapTitle{
+    font-size: 20px;
+}
+.laps{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: rgb(236, 212, 113);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+
+li{
+    padding: 6px;
+    border-bottom: 1px solid white;
+}
+li :last-child{
+    border-bottom: none;
+}
+li span{
+    font-weight: 700;
+}
